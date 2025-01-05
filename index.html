@@ -14,6 +14,7 @@
             background-attachment: fixed; /* 背景を固定する */
             background-size: cover;
             transition: background 0.3s ease; /* なめらかに色を変化 */
+            padding-top: 80px; /* ヘッダーと重ならないように余白を追加 */
         }
         header {
             background: rgba(26, 26, 26, 0.8); /* 背景透明度 */
@@ -23,6 +24,7 @@
             align-items: center;
             position: fixed;
             width: 100%;
+            top: 0;
             z-index: 1000;
         }
         header h1 {
@@ -94,6 +96,47 @@
             background: #121212;
             color: #808080;
             font-size: 0.9em;
+        }
+
+        /* レスポンシブデザイン */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.2em;
+            }
+            nav ul li {
+                margin-left: 10px;
+            }
+            .hero h2 {
+                font-size: 2.5em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+            .section h2 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1em;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .hero h2 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 0.9em;
+            }
+            .section h2 {
+                font-size: 1.2em;
+            }
         }
     </style>
 </head>
