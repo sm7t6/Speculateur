@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>キャラクター紹介 - スぺキュラトールと6ペンス</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Noto Serif JP', serif;
+            color: #f0f0f0;
+            background: linear-gradient(to bottom, #1a1a50, #121212);
+            background-attachment: fixed;
+            background-size: cover;
+            transition: background 0.3s ease;
+        }
+        header {
+            background: rgba(26, 26, 26, 0.8);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5em;
+            color: #ffcc00;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #f0f0f0;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        .character-section {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #2a2a2a;
+            margin-top: 100px; /* ヘッダーと重ならないようにする */
+        }
+        .character {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        .character img {
+            width: 200px;
+            height: 300px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .character-info {
+            max-width: 600px;
+            text-align: left;
+            color: #f0f0f0;
+        }
+        .character h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            color: #ffcc00;
+            margin-bottom: 15px;
+        }
+        .character p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #121212;
+            color: #808080;
+            font-size: 0.9em;
+        }
+
+        /* レスポンシブデザイン */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.2em;
+            }
+            nav ul li {
+                margin-left: 10px;
+            }
+            .character-section {
+                padding: 60px 20px;
+            }
+            .character {
+                flex-direction: column;
+                align-items: center;
+            }
+            .character img {
+                width: 150px;
+                height: 225px;
+                margin-bottom: 20px;
+            }
+            .character-info {
+                max-width: 100%;
+            }
+            .character h3 {
+                font-size: 1.8em;
+            }
+            .character p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>スぺキュラトールと6ペンス</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">概要</a></li>
+                <li><a href="#features">特徴</a></li>
+                <li><a href="#characters">キャラクター紹介</a></li>
+                <li><a href="#footer">フッター</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="characters" class="character-section">
+        <h2>キャラクター紹介</h2>
+        <div class="character">
+            <img src="character1.jpg" alt="キャラクター1">
+            <div class="character-info">
+                <h3>キャラクター名 1</h3>
+                <p>ここにキャラクター1の簡単な紹介文を入れます。バックストーリーや性格、特徴などを簡潔に記載しましょう。</p>
+            </div>
+        </div>
+        <div class="character">
+            <img src="character2.jpg" alt="キャラクター2">
+            <div class="character-info">
+                <h3>キャラクター名 2</h3>
+                <p>ここにキャラクター2の簡単な紹介文を入れます。バックストーリーや性格、特徴などを簡潔に記載しましょう。</p>
+            </div>
+        </div>
+        <!-- 他のキャラクターも追加可能 -->
+    </section>
+
+    <footer id="footer">
+        <p>シナリオ：路地裏さん　キャラクター：みんな</p>
+    </footer>
+</body>
+</html>
