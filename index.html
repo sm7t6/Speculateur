@@ -20,7 +20,7 @@
             background: rgba(26, 26, 26, 0.8); /* 背景透明度 */
             padding: 20px;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; /* メニュー項目を均等に配置 */
             align-items: center;
             position: fixed;
             width: 100%;
@@ -31,7 +31,7 @@
         header h1 {
             margin: 0;
             font-family: 'Playfair Display', serif;
-            font-size: 1.5em;
+            font-size: 1.8em; /* フォントサイズを少し大きくして調整 */
             color: #ffcc00;
         }
         nav ul {
@@ -39,7 +39,9 @@
             margin: 0;
             padding: 0;
             display: flex;
+            justify-content: space-between; /* メニュー項目が途切れないように */
             flex-wrap: wrap;
+            width: 50%; /* メニューを半分の幅に調整 */
         }
         nav ul li {
             margin-left: 20px;
