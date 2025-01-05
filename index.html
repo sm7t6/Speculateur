@@ -10,10 +10,13 @@
             margin: 0;
             font-family: 'Noto Serif JP', serif;
             color: #f0f0f0;
-            background: #121212;
+            background: linear-gradient(to bottom, #1a1a50, #121212);
+            background-attachment: fixed; /* 背景を固定する */
+            background-size: cover;
+            transition: background 0.3s ease; /* なめらかに色を変化 */
         }
         header {
-            background: #1a1a1a;
+            background: rgba(26, 26, 26, 0.8); /* 背景透明度 */
             padding: 20px;
             display: flex;
             justify-content: space-between;
@@ -52,18 +55,8 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: url('https://via.placeholder.com/1920x1080') no-repeat center/cover;
             color: #f0f0f0;
             position: relative;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
         }
         .hero .content {
             position: relative;
@@ -143,5 +136,28 @@
     <footer id="footer">
         <p>シナリオ：路地裏さん　キャラクター：みんな</p>
     </footer>
+
+    <script>
+        // スクロールに応じて背景を変更
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY; // 現在のスクロール量
+            const maxScroll = document.body.scrollHeight - window.innerHeight; // スクロール可能な最大量
+
+            // スクロール割合を計算 (0〜1)
+            const scrollRatio = scrollPosition / maxScroll;
+
+            // グラデーションの色を設定
+            const startColor = [26, 26, 80]; // 深い青 (夜)
+            const endColor = [121, 61, 12]; // 暖かい橙色 (夕暮れ)
+
+            // 色の中間値を計算
+            const currentColor = startColor.map((start, index) => 
+                Math.round(start + (endColor[index] - start) * scrollRatio)
+            );
+
+            // CSSの背景色を更新
+            document.body.style.background = `rgb(${currentColor.join(',')})`;
+        });
+    </script>
 </body>
 </html>
