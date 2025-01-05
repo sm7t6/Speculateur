@@ -26,6 +26,7 @@
             width: 100%;
             top: 0;
             z-index: 1000;
+            flex-wrap: wrap;
         }
         header h1 {
             margin: 0;
@@ -38,6 +39,7 @@
             margin: 0;
             padding: 0;
             display: flex;
+            flex-wrap: wrap;
         }
         nav ul li {
             margin-left: 20px;
@@ -154,10 +156,10 @@
 
     <div class="hero">
         <div class="content">
-            <h2 style="font-size: 2.5em;">その日はありきたりな1日だった。<br>
+            <h2>その日はありきたりな1日だった。<br>
                 少なくともあなたにとっては何ら変哲の無い、<br>
                 ごく平凡な日常を送っていた……筈だった。<br><br></h2>
-            <p style="font-size: 1.1em;">あなたたちはとあるニュースを聞く事になる。<br>
+            <p>あなたたちはとあるニュースを聞く事になる。<br>
                 それは「とある大学が新しい星を見つけた」というものだった。<br><br>
                 さて、そんなよくあるニュースを聞き、よくある一日を終えようとしたその時、<br>
                 ほとんどオブジェと化していた街の防災無線が鳴るのを聞くだろう。<br>
@@ -167,14 +169,14 @@
     </div>
 
     <section id="about" class="section" style="background-color: #2a2a2a; margin-bottom: 40px;">
-    <h2>ここに情報が入る</h2>
-    <p>ここに情報を追加してください。</p>
-</section>
+        <h2>ここに情報が入る</h2>
+        <p>ここに情報を追加してください。</p>
+    </section>
 
-<section id="features" class="section" style="background-color: #333333; margin-bottom: 40px;"">
-    <h2>ここにも情報が入る</h2>
-    <p>ここに情報を追加してください。</p>
-</section>
+    <section id="features" class="section" style="background-color: #333333; margin-bottom: 40px;">
+        <h2>ここにも情報が入る</h2>
+        <p>ここに情報を追加してください。</p>
+    </section>
 
     <footer id="footer">
         <p>シナリオ：路地裏さん　キャラクター：みんな</p>
@@ -190,8 +192,8 @@
             const scrollRatio = scrollPosition / maxScroll;
 
             // グラデーションの色を設定
-            const startColor = [26, 26, 80]; // 暖かい橙色 (夕暮れ)230, 99, 71
-            const endColor = [230, 99, 71]; // 深い青 (夜)26, 26, 80
+            const startColor = [26, 26, 80]; // 暖かい橙色 (夕暮れ)
+            const endColor = [230, 99, 71]; // 深い青 (夜)
 
             // 色の中間値を計算
             const currentColor = startColor.map((start, index) => 
